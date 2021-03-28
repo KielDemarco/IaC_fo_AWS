@@ -15,8 +15,8 @@ provider "aws" {
 resource "aws_instance" "i1" {
   ami                    = "ami-047a51fa27710816e"
   instance_type          = lookup(var.t2_instances, "t2_nano", "t2.nano")
-  vpc_security_group_ids = ["sg-41e45e76"]
-  subnet_id              = "subnet-f37efc95"
+  vpc_security_group_ids = [""]
+  subnet_id              = ""
   count                  = var.ec2_count_i1
   tags = {
     Name = "i1"
@@ -27,8 +27,8 @@ resource "aws_instance" "i1" {
 resource "aws_instance" "i2" {
   ami                    = "ami-047a51fa27710816e"
   instance_type          = lookup(var.m4_instances, "m4_large", "m4.large")
-  vpc_security_group_ids = ["sg-41e45e76"]
-  subnet_id              = "subnet-f37efc95"
+  vpc_security_group_ids = [""]
+  subnet_id              = ""
   count                  = var.ec2_count_i2
   tags = {
     Name = "i2"
